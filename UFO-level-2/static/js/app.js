@@ -1,60 +1,31 @@
 // from data.js
 var tableData = data;
-
-// Select table body
+var tblColumns = ["datetime", "city", "state", "country", "shape", "durationMinutes", "comments"]
+// Refereces
 var tbody = d3.select("tbody");
+var btnSearch = d3.select("#btnSearch");
+var btnReset = d3.select("#btnReset");
 
-// UFO Sighting values
-tableData.forEach(function(ufoSighting) {
-    console.log(ufoSighting);
-
-//Create row for each data set
-    var row = tbody.append("tr");
-
-//Insert Cell Values
-    Object.entries(ufoSighting).forEach(function([key, value]) {
-        console.log(key, value);
-        var cell = row.append("td");
-        cell.text(value);
-    });
-  });
-
-  //Select button
-  var button = d3.select("#filter-btn");
-    button.on("click", function() {
-
-    tbody.html("");
-
-    // Select the input date get the raw HTML nodes
-    var input = d3.select("#datetime");
-    // Get the value property of the input date, state, shape
-    var inputValue = input.property("value");
-    console.log(inputValue);
+var searchDate = d3.select("#searchDate");
+var searchCity = d3.select("#searchCity");
+var searchState = d3.select("#searchState");
+var searchCountry = d3.select("#searchCountry");
+var searchShape = d3.select("#searchShape");
 
 //insert serach function here
 
-var filteredData = tableData.filter(sighting => sighting.datetime === inputValue ||
-    sighting.city === inputValue ||
-    sighting.state === inputValue ||
-    sighting.country === inputValue ||
-    sighting.shape === inputValue);
+var loadTableRows = (whichData) => { 
 
+    tbody.html("");
+	
+	whichData.forEach(dataRow => { 
+		var tblRow = tbody.append("tr");  
+		tblColumns.forEach(column => tblRow.append("td").text(dataRow[column]))
+	});
+}
 
-// console.log filter values
-    console.log(filteredData);    
+loadTableRows(tableData);
 
-    filteredData.forEach(function(selections) {
-
-        console.log(selections);
-        // Append one table row `tr` for each sighting
-        var row = tbody.append("tr");
-
-        Object.entries(selections).forEach(function([key, value]) {
-            console.log(key, value);
-            var cell = row.append("td");
-            cell.text(value);
-        });
-    });
-    });
+//
 
 
