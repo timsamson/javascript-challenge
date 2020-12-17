@@ -1,4 +1,12 @@
 // from data.js
 var tableData = data;
 
-// YOUR CODE HERE!
+// Select table body
+var tbody = d3.select("tbody");
+
+// UFO Sighting values
+tableData.forEach(function(ufoSighting) {
+    console.log(ufoSighting);
+
+  });
+
