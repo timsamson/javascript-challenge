@@ -31,11 +31,13 @@ tableData.forEach(function(ufoSighting) {
     var inputValue = input.property("value");
     console.log(inputValue);
 
-    // Filter Data
-    var filteredData = tableData.filter(sighting => sighting.datetime === inputValue);
-
-    // console.log filter values
-    console.log(filteredData);
+    var filteredData = tableData.filter(sighting => sighting.datetime === inputValue ||
+                                                    sighting.city === inputValue ||
+                                                    sighting.state === inputValue ||
+                                                    sighting.country === inputValue ||
+                                                    sighting.shape === inputValue);
+// console.log filter values
+    console.log(filteredData);    
 
     filteredData.forEach(function(selections) {
 
