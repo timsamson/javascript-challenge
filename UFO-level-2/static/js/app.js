@@ -31,11 +31,15 @@ tableData.forEach(function(ufoSighting) {
     var inputValue = input.property("value");
     console.log(inputValue);
 
-    var filteredData = tableData.filter(sighting => sighting.datetime === inputValue ||
-                                                    sighting.city === inputValue ||
-                                                    sighting.state === inputValue ||
-                                                    sighting.country === inputValue ||
-                                                    sighting.shape === inputValue);
+//insert serach function here
+
+var filteredData = tableData.filter(sighting => sighting.datetime === inputValue ||
+    sighting.city === inputValue ||
+    sighting.state === inputValue ||
+    sighting.country === inputValue ||
+    sighting.shape === inputValue);
+
+
 // console.log filter values
     console.log(filteredData);    
 
