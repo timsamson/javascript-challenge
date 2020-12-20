@@ -15,7 +15,7 @@ The truth is out there 👽 and it can be searched! Using a small dataset if UFO
 </p></li>
 <li><p>Search away, please note the available fields from the intial table load. (dataset is small and therefore has limitied values in each of the available search fields.</p></li>
 
-<li><p>UFO-level-2 contains a reset button, which will clear the filter fields and reset the table to teh inital data (all available sightings)</li></ul>
+<li><p>UFO-level-2 contains a reset button, which will clear the filter fields and reset the table to teh inital data (all available sightings)</li></ol>
 <br>
 
 <h3>Dependencies</h3>
