@@ -3,9 +3,11 @@
 <h3>The Truth</h3>
 The truth is out there 👽 and it can be searched! Using a small dataset if UFO sightings, there are two specific web pages that allow users to serach the data. These two pages are a basic search ( date only) and an advanced where users can search multiple fields, altho the function will only return values from the first field with a valid value, this function will not combine search parameters. 
 <br>
+
 ![nasa](UFO-level-1/static/images/nasa.jpg)
+
 <br>
-<h3>File Sturcture</h3>
+<h3>File Structure</h3>
 <p>There are two folders within the repository:
 <ul><li>UFO-level-1 | which contains the basic search files.</li>
 <li>UFO-level-2 | which contains the multi search files.</li></ul>
