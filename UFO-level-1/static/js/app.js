@@ -25,9 +25,10 @@ tableData.forEach(function(ufoSighting) {
 
     tbody.html("");
 
-    // Select the input date get the raw HTML nodes
+    // Select the input date
     var input = d3.select("#datetime");
-    // Get the value property of the input date, state, shape
+
+    // Get the input date
     var inputValue = input.property("value");
     console.log(inputValue);
 
@@ -50,5 +51,4 @@ tableData.forEach(function(ufoSighting) {
         });
     });
     });
-
 

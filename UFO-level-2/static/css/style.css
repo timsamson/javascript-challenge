@@ -55,10 +55,12 @@ body {
 /* Adding styles to the aside and filter form */
 .ufo-form {
   margin-top: 50px;
+  padding: 5px
 }
 
 .filters .panel-body {
   padding: 0;
+  padding: 5px
 }
 
 .filters {
